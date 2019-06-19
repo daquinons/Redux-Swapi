@@ -1,3 +1,4 @@
-export const FETCH_CHARACTER = 'FETCH_CHARACTER';
+export const FETCH_CHARACTERS = 'FETCH_CHARACTER';
+export const FETCHING = 'FETCHING';
 export const SUCCESS_FETCH = 'SUCCESS_FETCH';
 export const ERROR_FETCH = 'ERROR_FETCH';
