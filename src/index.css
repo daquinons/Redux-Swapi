@@ -29,13 +29,16 @@ body {
 }
 
 .satellite {
-  width: 10px;
-  height: 10px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  background: silver;
   animation: circle 6s infinite linear;
   margin-left: -200px;
   transform-origin: 200px center;
+  background-image: url("/img/PixelArt.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 @keyframes circle { to { transform: rotate(1turn); } }
 @keyframes sideToSide { to { transform: translateX(400px); } }
