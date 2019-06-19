@@ -1,5 +1,41 @@
 body {
+  background-color: black;
+}
+.outerspace {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: black;
+  color: #fefefe;
+  text-align: center;
+  position: relative;
 }
+
+.character-card {
+  margin: 0 auto;
+  height: 200px;
+  width: 400px;
+  padding-top: 200px;
+  margin-bottom: 50px;
+  border: 1px solid #fefefe;
+  border-radius: 400px;
+  background-color: chocolate;
+}
+
+.gravity {
+  width: 10px;
+  height: 10px;
+  animation: sideToSide 3s infinite ease-in-out alternate;
+}
+
+.satellite {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: silver;
+  animation: circle 6s infinite linear;
+  margin-left: -200px;
+  transform-origin: 200px center;
+}
+@keyframes circle { to { transform: rotate(1turn); } }
+@keyframes sideToSide { to { transform: translateX(400px); } }
