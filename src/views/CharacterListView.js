@@ -1,16 +1,19 @@
-import React from "react";
-import { connect } from "react-redux";
+import React from 'react';
+import { connect } from 'react-redux';
 
-import { CharacterList } from "../components";
+import { CharacterList } from '../components';
 // import actions
+import { fetchCharacters, setFetching, setSuccess } from '../actions/index';
 
 class CharacterListView extends React.Component {
   constructor() {
     super();
   }
 
-  componentDidMount() {
+  componentWillMount() {
     // call our action
+    this.props.setFetching(true);
+    this.props.fetchCharacters();
   }
 
   render() {
@@ -27,9 +30,17 @@ class CharacterListView extends React.Component {
 
 // our mapStateToProps needs to have two properties inherited from state
 // the characters and the fetching boolean
+function mapStateToProps(state) {
+  return {
+    characters: state.characters,
+    fetching: state.fetching
+  };
+}
 export default connect(
-  null /* mapStateToProps replaces null here */,
+  mapStateToProps /* mapStateToProps replaces null here */,
   {
-    /* action creators go here */
+    fetchCharacters,
+    setFetching,
+    setSuccess // To remove when API is back
   }
 )(CharacterListView);

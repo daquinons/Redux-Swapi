@@ -1,5 +1,47 @@
 body {
+  background-color: black;
+}
+.outerspace {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #181425;
+  color: #fefefe;
+  text-align: center;
+  position: relative;
 }
+
+.character-card {
+  margin: 0 auto;
+  height: 200px;
+  width: 400px;
+  padding-top: 200px;
+  margin-bottom: 50px;
+  border-radius: 400px;
+  background-image: url("/img/planet.gif");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.gravity {
+  width: 10px;
+  height: 10px;
+  animation: sideToSide 3s infinite ease-in-out alternate;
+}
+
+.satellite {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: circle 6s infinite linear;
+  margin-left: -200px;
+  transform-origin: 200px center;
+  background-image: url("/img/PixelArt.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@keyframes circle { to { transform: rotate(1turn); } }
+@keyframes sideToSide { to { transform: translateX(400px); } }
